@@ -1,0 +1,24 @@
+DROP TABLE IF EXISTS INVOICE;  
+CREATE TABLE INVOICE (  
+id INT AUTO_INCREMENT  PRIMARY KEY,  
+customer_name VARCHAR(50) NOT NULL,  
+invoice_no INT(8) NOT NULL  
+company_name VARCHAR(50) NOT NULL,
+company_address VARCHAR(150) NOT NULL,
+company_phone VARCHAR(15) NOT NULL,
+customer_role VARCHAR(50) NOT NULL,
+sender_name VARCHAR(50) NOT NULL,
+sender_address VARCHAR(150) NOT NULL,
+sender_phone VARCHAR(15) NOT NULL
+customer_id VARCHAR(15) NOT NULL
+);  
+
+DROP TABLE IF EXISTS ITEMS;  
+CREATE TABLE ITEMS (  
+id INT AUTO_INCREMENT  PRIMARY KEY,  
+invoice_no INT(8) NOT NULL  
+item_name VARCHAR(50) NOT NULL,
+item_description VARCHAR(150) NOT NULL,
+item_quantity INT(8) NOT NULL,
+unit_price DOUBLE(15,2) NOT NULL
+);  
